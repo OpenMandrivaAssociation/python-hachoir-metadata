@@ -8,23 +8,15 @@ Source0: 	%{module_name}-%{version}.tar.bz2
 License:	GPL
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
-Url: 		http://hachoir.org/wiki/hachoir-parser
+Url: 		http://hachoir.org/wiki/hachoir-metadata
 BuildArch:  noarch
 Requires:   python-hachoir-core
 Requires:   python-hachoir-parser
 BuildRequires: python-devel
 %description
-hachoir-parser is a package of most common file format parsers written 
-using hachoir-core. Not all parsers are complete, some are very good and 
-other are poor: only parse first level of the tree for example.
+hachoir-metadata is tool to extract metadata from multimedia files 
+(sound, video, archives, etc).
 
-A perfect parser have no "raw" field: with a perfect parser you are able 
-to know *each* bit meaning. Some good (but not perfect ;-)) parsers:
-
-    * Matroska video
-    * Microsoft RIFF (AVI video, WAV audio, CDA file)
-    * PNG picture
-    * TAR and ZIP archive 
 
 %prep
 %setup -q -n %{module_name}-%version
