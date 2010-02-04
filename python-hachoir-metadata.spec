@@ -2,13 +2,13 @@
 
 Summary:	Python library to read metadata file format for the hachoir framework
 Name: 		python-%{module_name}
-Version: 	1.2.1
-Release: 	%mkrel 2
+Version: 	1.3.1
+Release: 	%mkrel 1
 Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module_name}-%{version}.tar.gz
 License:	GPLv2
 Group: 		Development/Python
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
-URL: 		http://hachoir.org/wiki/hachoir-metadata
+URL: 		http://bitbucket.org/haypo/hachoir/wiki/Home
 BuildArch:	noarch
 Requires:	python-hachoir-core
 Requires:	python-hachoir-parser
@@ -23,11 +23,11 @@ hachoir-metadata is tool to extract metadata from multimedia files
 %setup -q -n %{module_name}-%{version}
 
 %build
-python setup.py build
+python setup.py build --disable-qt
 
 %install
 rm -rf %{buildroot}
-python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+python setup.py install --root=%{buildroot} --record=INSTALLED_FILES --disable-qt
 
 %clean
 rm -rf %{buildroot}
