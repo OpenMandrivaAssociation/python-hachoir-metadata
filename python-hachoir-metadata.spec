@@ -2,7 +2,7 @@
 
 Summary:	Python library to read metadata file format for the hachoir framework
 Name: 		python-%{module_name}
-Version: 	1.3.1
+Version: 	1.3.2
 Release: 	%mkrel 1
 Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module_name}-%{version}.tar.gz
 License:	GPLv2
@@ -23,7 +23,7 @@ hachoir-metadata is tool to extract metadata from multimedia files
 %setup -q -n %{module_name}-%{version}
 
 %build
-python setup.py build --disable-qt
+python setup.py build 
 
 %install
 rm -rf %{buildroot}
@@ -36,3 +36,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc AUTHORS COPYING README 
 %dir %{py_puresitedir}/hachoir_metadata
+%{py_puresitedir}/hachoir_metadata/qt/
