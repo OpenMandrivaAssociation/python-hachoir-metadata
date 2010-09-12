@@ -2,7 +2,7 @@
 
 Summary:	Python library to read metadata file format for the hachoir framework
 Name: 		python-%{module_name}
-Version: 	1.3.2
+Version: 	1.3.3
 Release: 	%mkrel 1
 Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module_name}-%{version}.tar.gz
 License:	GPLv2
@@ -27,13 +27,18 @@ python setup.py build
 
 %install
 rm -rf %{buildroot}
-python setup.py install --root=%{buildroot} --record=INSTALLED_FILES --disable-qt
+python setup.py install --root=%{buildroot} --disable-qt
 
 %clean
 rm -rf %{buildroot}
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
 %doc AUTHORS COPYING README 
 %dir %{py_puresitedir}/hachoir_metadata
 %{py_puresitedir}/hachoir_metadata/qt/
+%{py_sitedir}/hachoir_metadata
+%{py_sitedir}/hachoir_metadata-%{version}-py%{pyver}.egg-info
+%{_bindir}/hachoir-metadata
+%{_bindir}/hachoir-metadata-qt
+%{_bindir}/hachoir-metadata-gtk
