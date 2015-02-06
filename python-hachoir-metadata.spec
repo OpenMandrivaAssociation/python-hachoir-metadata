@@ -4,7 +4,7 @@ Summary:	Python library to read metadata file format for the hachoir framework
 
 Name: 		python-%{module_name}
 Version: 	1.3.3
-Release: 	3
+Release: 	4
 Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module_name}-%{version}.tar.gz
 License:	GPLv2
 Group: 		Development/Python
