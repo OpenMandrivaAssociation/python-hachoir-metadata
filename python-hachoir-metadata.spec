@@ -8,7 +8,7 @@ Release: 	4
 Source0: 	http://cheeseshop.python.org/packages/source/h/%{module_name}/%{module_name}-%{version}.tar.gz
 License:	GPLv2
 Group: 		Development/Python
-URL: 		http://bitbucket.org/haypo/hachoir/wiki/Home
+URL: 		https://bitbucket.org/haypo/hachoir/wiki/Home
 BuildArch:	noarch
 Requires:	python-hachoir-core
 Requires:	python-hachoir-parser
